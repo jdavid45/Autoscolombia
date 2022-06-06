@@ -1,0 +1,111 @@
+<?php
+  include ("conexion.php");
+  $con=conectar();
+
+  $sql="SELECT * FROM empleados";
+  $query=mysqli_query($con,$sql);
+  $row=mysqli_fetch_array($query);
+?>
+<!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Autos Colombia</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    </head>
+    <body style="background-color:teal;">
+
+    	<div class="container" style="background-color:snow;">
+    		<br>
+    		<center>
+    			<h1>AutosColombia</h1>
+    			<br>
+    			<img title="Logo" 
+          src ="https://cdn-icons-png.flaticon.com/512/89/89102.png" 
+          width="130"
+          height="130">
+          <br>
+          <br>
+          <h3>Ingreso</h3>
+          <br>
+        </center>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Vehiculo</h5>
+            
+            <div class="row">
+              <label class="form-label">Placa</label>
+              <div class="col"><input type="text-body" id="placa" class="form-control"></div>
+              <div class="col">
+               <a href="pago.html"><button type="button" class="btn btn-primary" >Buscar</button></a>
+             </div>
+           </div>
+           <label class="form-label">Color</label>
+           <div class="col"><input type="text-body" id="color" class="form-control"></div>
+           <label class="form-label">Marca</label>
+           <div class="col"><input type="text-body" id="marca" class="form-control"></div>
+           <label class="form-label">Km</label>
+           <div class="col"><input type="text-body" id="km" class="form-control"></div>
+           <label class="form-label">Estado</label>
+           <div class="col"><input type="text-body" id="estado" class="form-control"></div>
+         </div>
+         
+       </div>     
+       <br>
+       <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Cliente</h5>
+          <div class="row">
+            <label class="form-label">Cedula</label>
+            <div class="col"><input type="text-body" id="cedula" class="form-control"></div>
+            <div class="col">
+             <a href="pago.html"><button type="button" class="btn btn-primary" >Buscar</button></a>
+           </div>
+         </div>
+         <label class="form-label">Nombre</label>
+         <div class="col"><input type="text-body" id="nombre" class="form-control"></div>
+         <label class="form-label">Telefono</label>
+         <div class="col"><input type="text-body" id="telefono" class="form-control"></div>
+         <label class="form-label">Email</label>
+         <div class="col"><input type="text-body" id="email" class="form-control"></div>
+         <label class="form-label">Direccion</label>
+         <div class="col"><input type="text-body" id="direccion" class="form-control"></div>
+       </div>
+     </div>
+     <br>
+     <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Detalles</h5>
+          <div class="row">
+            <div class="col form-group">
+    <label class="form-label">Meses de cupo</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select></div>
+            <div class="col form-group">
+    <label class="form-label">Celda</label>
+    <select class="form-control" id="celda">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select></div>
+         </div>
+       </div>
+     </div>
+     <center>
+      <br>
+      <div class="d-grid gap-2 d-md-block">
+        <a href="pago.html"><button type="button" class="btn btn-primary" >Pagar</button></a>
+        <a href="menu.html"><button type="button" class="btn btn-primary" >Confirmar</button></a>
+      </div>
+    </center>
+    <br>
+  </body>
+  </html>
